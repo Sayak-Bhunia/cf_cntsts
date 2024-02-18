@@ -254,9 +254,9 @@ using namespace std;
 void fastIO(){ios_base::sync_with_stdio(false);}
 #define lint long long int
 #define tc int t; cin>>t; while(t--)
-#define sort(a) sort(a.begin(),a.end())
-#define rev(a) sort(a.rbegin(),a.rend())
-#define sortgtr(a) sort(a.begin(),a.end(),greater<int>())
+#define sortasc(a) std::sort(a.begin(), a.end())
+#define rev(a) reverse(a.begin(), a.end())
+#define sortdsc(a) std::sort(a.begin(), a.end(), greater<int>())
 #define MOD 1000000007
 
 /*------------------------------------------------------------------------------------*/
@@ -371,14 +371,17 @@ int main()
                 not_used.insert(curr-1);
             }
         }
-        sort(res);
-        reverse(res.rbegin(),res.rend());
+        sortdsc(res);
         for(auto it:res) {
             cout << it << " ";
         }
         cout <<endl;
     }
 }
+
+
+
+
 
 
 
